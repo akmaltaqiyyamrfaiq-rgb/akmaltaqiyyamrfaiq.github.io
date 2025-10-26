@@ -1,0 +1,153 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f9fc;
+  color: #2c3e50;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: linear-gradient(135deg, #e9f1ff, #ffffff);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.6rem;
+  color: #1f3c88;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #4b6584;
+}
+
+/* Navigasi */
+nav {
+  text-align: center;
+  background: #dce6f7;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #1f3c88;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+/* Main */
+main {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Animasi section */
+section {
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Judul section */
+h2 {
+  color: #1f3c88;
+  border-bottom: 2px solid #b0c4de;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+/* List & Projects */
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+  color: #2c3e50;
+}
+
+.projects {
+  display: grid;
+  gap: 20px;
+}
+
+.project {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+}
+
+.project h3 {
+  color: #1f3c88;
+  margin-bottom: 8px;
+}
+
+/* Link */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #e9f1ff;
+  padding: 25px;
+  color: #4b6584;
+  font-size: 0.9rem;
+}
+
+/* Tombol Kembali ke Atas */
+#toTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+  font-size: 22px;
+  background-color: #1f3c88;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+#toTopBtn:hover {
+  background-color: #007bff;
+  transform: translateY(-4px);
+}

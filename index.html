@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Akmal</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" type="image/png" />
+
+  <!-- Preview Card (kalau dibagikan ke medsos) -->
+  <meta property="og:title" content="Portofolio Akmal — Siswa TKJ" />
+  <meta property="og:description" content="Website portofolio profesional milik Akmal, siswa SMK jurusan Teknik Komputer dan Jaringan." />
+  <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <header>
+    <h1>Akmal Taqiyyudin Amrullah Faiq</h1>
+    <p>Siswa SMK | Teknik Komputer dan Jaringan</p>
+  </header>
+
+  <nav>
+    <a href="#about">Tentang</a>
+    <a href="#skills">Keahlian</a>
+    <a href="#projects">Proyek</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>Tentang Saya</h2>
+      <p>
+        Saya Akmal, siswa SMK jurusan Teknik Komputer dan Jaringan.
+        Saya memiliki ketertarikan dalam bidang administrasi sistem, jaringan komputer,
+        dan pengembangan web dasar. Saat ini saya fokus mempelajari instalasi sistem operasi,
+        konfigurasi jaringan lokal (LAN), dan simulasi topologi jaringan.
+      </p>
+      <p>
+        Saya percaya bahwa kemampuan teknis harus dibarengi dengan pemahaman konsep yang kuat
+        dan pengalaman langsung. Oleh karena itu, portofolio ini menjadi tempat saya
+        mendokumentasikan proses pembelajaran dan proyek latihan yang saya kerjakan selama masa studi.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Keahlian</h2>
+      <ul>
+        <li>Pemahaman dasar jaringan komputer (LAN, IP Address, dan topologi jaringan)</li>
+        <li>Instalasi dan konfigurasi sistem operasi (Linux Debian, Windows)</li>
+        <li>Konfigurasi IP Address pada perangkat jaringan</li>
+        <li>Pemahaman dasar penggunaan Cisco Packet Tracer</li>
+        <li>Dasar pemrograman web (HTML dan CSS)</li>
+        <li>Kemampuan troubleshooting sederhana pada perangkat komputer</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Proyek</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>Latihan Instalasi Sistem Operasi Linux Debian</h3>
+          <p>Melakukan proses instalasi dan konfigurasi dasar sistem operasi Linux Debian sebagai latihan pembelajaran administrasi jaringan di sekolah.</p>
+        </div>
+        <div class="project">
+          <h3>Konfigurasi IP Address</h3>
+          <p>Mempelajari dan mempraktikkan cara mengatur IP Address pada jaringan lokal untuk memahami konsep dasar komunikasi antar perangkat.</p>
+        </div>
+        <div class="project">
+          <h3>Pengenalan Jaringan LAN dan Simulasi Topologi</h3>
+          <p>Melakukan simulasi sederhana jaringan LAN menggunakan software pembelajaran untuk memahami struktur dan fungsi dasar switch dan router.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Kontak</h2>
+      <p>Jika ingin menghubungi saya untuk keperluan magang, kerja sama, atau pembelajaran, silakan melalui:</p>
+      <ul>
+        <li>Email: <a href="mailto:akmaltaqiyyamrfaiq@gmail.com">akmaltaqiyyamrfaiq@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/akmaltaqiyyamrfaiq" target="_blank">github.com/akmaltaqiyyamrfaiq</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Akmal. Semua hak dilindungi.</p>
+  </footer>
+
+  <!-- Tombol Kembali ke Atas -->
+  <button id="toTopBtn" title="Kembali ke atas">↑</button>
+
+  <script>
+    // === Animasi muncul saat discroll ===
+    const sections = document.querySelectorAll("section");
+    function revealSections() {
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight * 0.85;
+        if (sectionTop < triggerPoint) {
+          section.classList.add("show");
+        }
+      });
+    }
+    window.addEventListener("scroll", revealSections);
+    revealSections();
+
+    // === Tombol Kembali ke Atas ===
+    const toTopBtn = document.getElementById("toTopBtn");
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        toTopBtn.style.display = "block";
+      } else {
+        toTopBtn.style.display = "none";
+      }
+    };
+    toTopBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
+</body>
+</html>
